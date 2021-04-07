@@ -17,7 +17,7 @@ SET @DAY_OF_WEEK := 'Maandag';
 SET @CURRENT_PATIENT_IDENTIFIER := 77777700001; -- Arbitrary prefix of six 7's.
 SET @ORDCOUNT := 0; -- first order is always ORD-1, second is ORD-2, etc.
 
-SELECT max(patient_id)+1 INTO @CURRENT_PATIENT_ID from patient;
+SELECT max(person_id)+1 INTO @CURRENT_PATIENT_ID from person;
 
 /* add patient */
 INSERT INTO `person` VALUES(@CURRENT_PATIENT_ID,'F','1950-03-07',0,0,NULL,NULL,1,'2021-03-19 10:36:22',NULL,NULL,0,NULL,NULL,NULL,(select UUID()),0,NULL);
