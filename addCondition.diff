@@ -1,0 +1,36 @@
+diff --git a/openmrs106.sql b/openmrs106.sql
+index 53af87c..1a7c1d5 100644
+--- a/openmrs106.sql
++++ b/openmrs106.sql
+@@ -1894,7 +1894,7 @@ CREATE TABLE `conditions` (
+   CONSTRAINT `conditions_patient_fk` FOREIGN KEY (`patient_id`) REFERENCES `patient` (`patient_id`) ON UPDATE CASCADE,
+   CONSTRAINT `conditions_previous_condition_id_fk` FOREIGN KEY (`previous_condition_id`) REFERENCES `conditions` (`condition_id`),
+   CONSTRAINT `conditions_voided_by_fk` FOREIGN KEY (`voided_by`) REFERENCES `users` (`user_id`)
+-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
++) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+ /*!40101 SET character_set_client = @saved_cs_client */;
+ 
+ --
+@@ -1903,6 +1903,7 @@ CREATE TABLE `conditions` (
+ 
+ LOCK TABLES `conditions` WRITE;
+ /*!40000 ALTER TABLE `conditions` DISABLE KEYS */;
++INSERT INTO `conditions` VALUES (1,NULL,191,'ACTIVE',142473,'',NULL,'',NULL,NULL,1,'2021-03-26 17:00:21',0,NULL,NULL,NULL,'7919b02d-0180-4999-a9f8-144fbe176ec1'),(2,NULL,191,'ACTIVE',117399,'',NULL,'',NULL,NULL,1,'2021-03-26 17:02:04',0,NULL,NULL,NULL,'6254defb-4d9d-48ab-be94-18ea8c32f628');
+ /*!40000 ALTER TABLE `conditions` ENABLE KEYS */;
+ UNLOCK TABLES;
+ 
+@@ -5609,7 +5610,7 @@ CREATE TABLE `scheduler_task_config` (
+ 
+ LOCK TABLES `scheduler_task_config` WRITE;
+ /*!40000 ALTER TABLE `scheduler_task_config` DISABLE KEYS */;
+-INSERT INTO `scheduler_task_config` VALUES (2,'Auto Close Visits Task','Stops all active visits that match the visit type(s) specified by the value of the global property \'visits.autoCloseVisitType\'','org.openmrs.scheduler.tasks.AutoCloseVisitsTask','2011-11-28 23:59:59','MM/dd/yyyy HH:mm:ss',86400,0,0,1,'2018-10-05 12:02:37',NULL,NULL,NULL,'8c17b376-1a2b-11e1-a51a-00248140a5eb'),(3,'Process HL7 Task',NULL,'org.openmrs.scheduler.tasks.ProcessHL7InQueueTask','2018-10-05 12:13:10',NULL,5,1,1,2,'2018-10-05 12:13:10',2,'2021-03-26 16:57:50','2021-03-26 16:57:50','f2a93d88-79d6-4761-ab0a-ad6339c84e89');
++INSERT INTO `scheduler_task_config` VALUES (2,'Auto Close Visits Task','Stops all active visits that match the visit type(s) specified by the value of the global property \'visits.autoCloseVisitType\'','org.openmrs.scheduler.tasks.AutoCloseVisitsTask','2011-11-28 23:59:59','MM/dd/yyyy HH:mm:ss',86400,0,0,1,'2018-10-05 12:02:37',NULL,NULL,NULL,'8c17b376-1a2b-11e1-a51a-00248140a5eb'),(3,'Process HL7 Task',NULL,'org.openmrs.scheduler.tasks.ProcessHL7InQueueTask','2018-10-05 12:13:10',NULL,5,1,1,2,'2018-10-05 12:13:10',2,'2021-03-26 17:02:30','2021-03-26 17:02:30','f2a93d88-79d6-4761-ab0a-ad6339c84e89');
+ /*!40000 ALTER TABLE `scheduler_task_config` ENABLE KEYS */;
+ UNLOCK TABLES;
+ 
+@@ -6041,4 +6042,4 @@ UNLOCK TABLES;
+ /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+ /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+ 
+--- Dump completed on 2021-03-26 16:57:53
++-- Dump completed on 2021-03-26 17:02:35
