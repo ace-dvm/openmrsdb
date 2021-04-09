@@ -97,7 +97,7 @@ UPDATE patient SET allergy_status = 'See list' where patient_id = @CURRENT_PATIE
 SELECT max(encounter_id)+1 INTO @CURRENT_ENC_ID3 from encounter;
 INSERT INTO `encounter` (`encounter_id`, `encounter_type`, `patient_id`, `location_id`, `form_id`, `encounter_datetime`, `creator`, `date_created`, `voided`, `voided_by`, `date_voided`, `void_reason`, `changed_by`, `date_changed`, `visit_id`, `uuid`) VALUES
 (@CURRENT_ENC_ID3,2,@CURRENT_PATIENT_ID,6,3,CONCAT(@CLASS_DATE,' 14:00:05'),1,'2021-03-19 14:00:05',0,NULL,NULL,NULL,NULL,NULL,@CURRENT_VISIT_ID,(select uuid()));
-SET @CURRENT_ENC_ID3 := 4985;
+
 -- uses encounter_id from above
 INSERT INTO `encounter_provider` (`encounter_id`, `provider_id`, `encounter_role_id`, `creator`, `date_created`, `changed_by`, `date_changed`, `voided`, `date_voided`, `voided_by`, `void_reason`, `uuid`) VALUES 
 (@CURRENT_ENC_ID3,1,1,1,'2021-03-19 14:00:05',NULL,NULL,0,NULL,NULL,NULL,(select uuid()));
@@ -242,7 +242,7 @@ UPDATE patient SET allergy_status = 'See list' where patient_id = @CURRENT_PATIE
 SELECT max(encounter_id)+1 INTO @CURRENT_ENC_ID3 from encounter;
 INSERT INTO `encounter` (`encounter_id`, `encounter_type`, `patient_id`, `location_id`, `form_id`, `encounter_datetime`, `creator`, `date_created`, `voided`, `voided_by`, `date_voided`, `void_reason`, `changed_by`, `date_changed`, `visit_id`, `uuid`) VALUES
 (@CURRENT_ENC_ID3,2,@CURRENT_PATIENT_ID,6,3,CONCAT(@CLASS_DATE,' 14:00:05'),1,'2021-03-19 14:00:05',0,NULL,NULL,NULL,NULL,NULL,@CURRENT_VISIT_ID,(select uuid()));
-SET @CURRENT_ENC_ID3 := 4985;
+
 -- uses encounter_id from above
 INSERT INTO `encounter_provider` (`encounter_id`, `provider_id`, `encounter_role_id`, `creator`, `date_created`, `changed_by`, `date_changed`, `voided`, `date_voided`, `voided_by`, `void_reason`, `uuid`) VALUES 
 (@CURRENT_ENC_ID3,1,1,1,'2021-03-19 14:00:05',NULL,NULL,0,NULL,NULL,NULL,(select uuid()));
@@ -447,7 +447,7 @@ UPDATE patient SET allergy_status = 'See list' where patient_id = @CURRENT_PATIE
 SELECT max(encounter_id)+1 INTO @CURRENT_ENC_ID3 from encounter;
 INSERT INTO `encounter` (`encounter_id`, `encounter_type`, `patient_id`, `location_id`, `form_id`, `encounter_datetime`, `creator`, `date_created`, `voided`, `voided_by`, `date_voided`, `void_reason`, `changed_by`, `date_changed`, `visit_id`, `uuid`) VALUES
 (@CURRENT_ENC_ID3,2,@CURRENT_PATIENT_ID,6,3,CONCAT(@CLASS_DATE,' 14:00:05'),1,'2021-03-19 14:00:05',0,NULL,NULL,NULL,NULL,NULL,@CURRENT_VISIT_ID,(select uuid()));
-SET @CURRENT_ENC_ID3 := 4985;
+
 -- uses encounter_id from above
 INSERT INTO `encounter_provider` (`encounter_id`, `provider_id`, `encounter_role_id`, `creator`, `date_created`, `changed_by`, `date_changed`, `voided`, `date_voided`, `voided_by`, `void_reason`, `uuid`) VALUES 
 (@CURRENT_ENC_ID3,1,1,1,'2021-03-19 14:00:05',NULL,NULL,0,NULL,NULL,NULL,(select uuid()));
