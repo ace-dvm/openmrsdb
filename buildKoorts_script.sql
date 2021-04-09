@@ -1111,9 +1111,7 @@ make sure rx reflects new duration: Door met ciprofloxacine 2 dd 500 mg (totaal 
 */
 
 
-
-/*---------------------------------------------*/
-/* to be removed */
-SET @CURRENT_PATIENT_ID = 225;
-SET @CLASS_DATE := '2021-03-31';
-/**/
+/* cleaning up tests:
+UPDATE person_name SET family_name = 'de Vries', given_name = CONCAT('A.', person_id -191) WHERE family_name = 'de Vries1';
+UPDATE patient_identifier SET identifier = CONCAT('10000',patient_id) WHERE identifier = '77777700006'; 
+*/
